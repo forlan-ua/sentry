@@ -32,7 +32,7 @@ docker-compose run --rm base sentry config generate-secret-key
 
 4) If this is a new database, you'll need to run upgrade
 ```batch
-docker-compose run --rm base sentry upgrade
+docker-compose run --rm web sentry upgrade
 ```
 
 5) Run services
