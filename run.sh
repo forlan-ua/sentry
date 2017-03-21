@@ -11,6 +11,6 @@ cp run.sh ./data/sentry/run.sh
 docker-compose run --rm base sed -i "s/<SECRET>/$SAFE_KEY/g" /data/docker-compose.yml
 
 cp ./data/sentry/docker-compose.yml docker-compose.yml
-rm ./data/sentry/docker-compose.yml.tpl ./data/sentry/docker-compose.yml ./data/sentry/run.sh
+rm ./data/sentry/docker-compose.yml ./data/sentry/run.sh
 
-# docker-compose run --rm base sentry upgrade
+docker-compose run --rm web sentry upgrade
